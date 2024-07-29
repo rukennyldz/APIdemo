@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>RedisProperties.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #bcbec4;}
+.s1 { color: #cf8e6d;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+RedisProperties.java</font>
+</center></td></tr></table>
+<pre><span class="s0">@Configuration</span>
+
+<span class="s1">package </span><span class="s0">com</span><span class="s2">.</span><span class="s0">example</span><span class="s2">.</span><span class="s0">apidmeo</span><span class="s2">.</span><span class="s0">redis</span><span class="s2">;</span>
+
+<span class="s1">import </span><span class="s0">io</span><span class="s2">.</span><span class="s0">lettuce</span><span class="s2">.</span><span class="s0">core</span><span class="s2">.</span><span class="s0">dynamic</span><span class="s2">.</span><span class="s0">annotation</span><span class="s2">.</span><span class="s0">Value</span><span class="s2">;</span>
+<span class="s1">import </span><span class="s0">org</span><span class="s2">.</span><span class="s0">springframework</span><span class="s2">.</span><span class="s0">context</span><span class="s2">.</span><span class="s0">annotation</span><span class="s2">.</span><span class="s0">Configuration</span><span class="s2">;</span>
+
+<span class="s1">public class </span><span class="s0">RedisProperties </span><span class="s2">{</span>
+    <span class="s1">private int </span><span class="s0">redisPort</span><span class="s2">;</span>
+    <span class="s1">private </span><span class="s0">String redisHost</span><span class="s2">;</span>
+
+    <span class="s1">public </span><span class="s0">RedisProperties</span><span class="s2">(</span>
+            <span class="s0">@Value</span><span class="s2">(</span><span class="s3">&quot;${spring.data.redis.port}&quot;</span><span class="s2">) </span><span class="s1">int </span><span class="s0">redisPort</span><span class="s2">,</span>
+            <span class="s0">@Value</span><span class="s2">(</span><span class="s3">&quot;${spring.data.redis.host}&quot;</span><span class="s2">) </span><span class="s0">String redisHost</span><span class="s2">) {</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">redisPort </span><span class="s2">= </span><span class="s0">redisPort</span><span class="s2">;</span>
+        <span class="s1">this</span><span class="s2">.</span><span class="s0">redisHost </span><span class="s2">= </span><span class="s0">redisHost</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s4">// getters</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
